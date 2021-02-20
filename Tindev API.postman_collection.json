@@ -77,12 +77,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE_URL}}//register",
+							"raw": "{{BASE_URL}}/register",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
-								"",
 								"register"
 							]
 						}
@@ -110,7 +109,76 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Expired JWT Token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/user/me",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"user",
+										"me"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Feb 2021 18:26:10 GMT"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "ce0cdf"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://localhost/_profiler/ce0cdf"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 401,\n    \"message\": \"Expired JWT Token\"\n}"
+						}
+					]
 				}
 			]
 		}
